@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Misfat RH Management System - Login</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="auth-page">
+		<div class="left-panel">
+			<div class="brand">Misfat RH platform.</div>
+			<div class="tagline">Welcome to Misfat RH platform</div>
+			<div class="illustration"></div>
+			<div class="phone-stack" aria-hidden="true">
+				<div class="phone one"><div class="screen">less papaers , less time , more time for work!</div></div>
+				<div class="phone two"><div class="screen">Attestation •  Absence • ECTT </div></div>
+			</div>
+		</div>
+		<div class="right-panel">
+			<div class="card">
+				<h1>Log in to Misfat.</h1>
+				<p class="sub">Welcome back! Login with your data that you entered during registration</p>
+				
+				<div class="divider">or</div>
+				<form id="login-form">
+					<div class="field">
+						<H4>Matricule</H4>
+						<div class="input">
+						<span class="leading">#</span>
+						<input id="matricule" name="matricule" type="text" placeholder="Enter your matricule" required>
+						</div>
+					</div>
+					<div class="field">
+						<label class="label" for="password">Password</label>
+						<div class="input">
+							<span class="leading">• • •</span>
+							<input id="password" name="password" type="password" placeholder="••••••••" required>
+							<span class="trailing" onclick="togglePassword()">👁️</span>
+						</div>
+					</div>
+					<div class="row">
+						<label style="display:flex; align-items:center; gap:8px; font-size:13px; color:#4a4a4a;">
+							<input type="checkbox" checked> Remember me
+						</label>
+					<a href="#" id="forgot-link">Forgot your password?</a>
+					</div>
+					<button class="btn-primary" type="submit">LOGIN</button>
+				</form>
+			
+			<div class="modal" id="forgot-modal" hidden>
+				<div class="modal-backdrop" data-close></div>
+				<div class="modal-dialog" role="dialog" aria-labelledby="forgot-title" aria-modal="true">
+					<div class="modal-header">
+						<h3 id="forgot-title">Forgot password</h3>
+						<button class="modal-close" type="button" data-close aria-label="Close">×</button>
+					</div>
+					<div class="modal-body">
+						<p class="sub">For security, password resets are handled by the IT team or an HR admin.</p>
+						<ul style="margin:10px 0 0; padding-left:18px;">
+							<li>Email: <a href="mailto:it@misfat.local">it@misfat.local</a></li>
+                            <li>Email: <a href="mailto:HR@misfat.local">hr@misfat.local</a></li>
+							<li>Phone: +216 70 000 000 </li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button class="btn-chip" data-close>Close</button>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>

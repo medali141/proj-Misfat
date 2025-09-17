@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employees Directory</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="dash-header">
+		<div class="dash-container">
+			<div class="dash-brand">Misfat RH</div>
+			<nav class="dash-nav">
+				<a href="dashboard.html">Dashboard</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="dash-container" style="padding:24px 24px 40px;">
+		<h1>Employees Directory</h1>
+		<p class="sub">Search employee or stagiaire by matricule.</p>
+		<div class="search-bar">
+			<label class="label" for="search-mat">Matricule</label>
+			<div class="input">
+				<span class="leading">#</span>
+				<input id="search-mat" type="text" placeholder="Enter matricule (e.g., 12345)">
+			</div>
+			<button class="btn-primary" id="btn-search" style="margin-top:10px; width:auto;">Search</button>
+		</div>
+
+		<section id="result" class="card" style="margin-top:18px; display:none;"></section>
+	</main>
+
+	<script src="app.js"></script>
+</body>
+</html>

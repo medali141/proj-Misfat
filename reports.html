@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reports</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="dash-header">
+		<div class="dash-container">
+			<div class="dash-brand">Misfat RH</div>
+			<nav class="dash-nav">
+				<a href="dashboard.html">Dashboard</a>
+				<a href="employees.html">Employees</a>
+				<a href="attendance.html">Attendance</a>
+				<a href="leave.html">Leave</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="dash-container" style="padding:24px 24px 40px;">
+		<h1>Reports</h1>
+		<p class="sub">Overview of key HR metrics. Data aggregated locally for demo.</p>
+
+		<div class="grid-inner" style="grid-template-columns: 1fr 1fr;">
+			<div class="tile tile-card">
+				<h3>Headcount</h3>
+				<p class="muted">Employees with contract vs stagiaires.</p>
+				<div class="donut" id="rpt-donut"></div>
+			</div>
+			<div class="tile tile-dark">
+				<h3>Attendance (last 7 days)</h3>
+				<div id="rpt-bars" style="height:260px;"></div>
+			</div>
+		</div>
+	</main>
+
+	<script src="app.js"></script>
+</body>
+</html>

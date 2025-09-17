@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Misfat RH - Dashboard</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="dash-header">
+		<div class="dash-container">
+			<div class="dash-brand">Misfat RH</div>
+            <nav class="dash-nav">
+                <a href="employees.html">Employees</a>
+                <a href="attendance.html">Attendance</a>
+                <a href="leave.html">Leave Requests</a>
+            </nav>
+			<div class="dash-actions">
+				<div class="avatar-menu">
+					<button class="avatar-button" id="avatar-button" aria-haspopup="menu" aria-expanded="false" aria-controls="avatar-menu">
+						<span class="avatar-initials">MC</span>
+					</button>
+					<div class="menu" id="avatar-menu" role="menu" hidden>
+						<a href="#" role="menuitem">My Profile</a>
+						<a href="#" role="menuitem">Settings</a>
+						<div class="menu-sep"></div>
+						<a href="login.HTML" role="menuitem">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="dash-hero">
+        <div class="dash-container hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow">HR Platform • Misfat</div>
+                <h1><span>MANAGE</span><br>PEOPLE & OPERATIONS</h1>
+                <div class="hero-cta">
+                    <button class="btn-primary" id="open-hr-console">Open HR Console</button>
+                    <div class="stat-pill">
+                        <div class="dot"></div>
+                        1500+ <span>Employees managed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-art" aria-hidden="true"></div>
+        </div>
+	</section>
+
+	<section class="dash-grid">
+        <div class="dash-container grid-inner">
+            <article class="tile tile-dark">
+                <h3><a href="employees.html" style="color:inherit; text-decoration:none;">Employees Directory</a></h3>
+                <div class="chips">
+                    <span class="chip">Profiles</span>
+                    <span class="chip">Departments</span>
+                    <span class="chip">Contracts</span>
+                </div>
+            </article>
+            <article class="tile tile-accent">
+                <p class="kicker">Attendance, Absence and Attestations tracking unified in one place.</p>
+                <a class="btn-chip" href="attendance.html" style="display:inline-block; text-decoration:none;">Manage Attendance</a>
+            </article>
+            <article class="tile tile-card" id="tile-attestation" title="Hover to generate an attestation">
+                <h3>Attestations</h3>
+                <p class="muted">Generate and download HR attestations.</p>
+                <div class="dots"></div>
+            </article>
+
+            <article class="tile tile-card" id="tile-leave">
+                <h3><a href="leave.html" style="color:inherit; text-decoration:none;">Leave Requests</a></h3>
+                <p class="muted">Submit, approve and track leaves.</p>
+                <div class="dots"></div>
+            </article>
+            <article class="tile tile-accent">
+                <p class="kicker">Analytics & KPIs: headcount, turnover, attendance rates.</p>
+                <a class="btn-chip" href="reports.html" style="display:inline-block; text-decoration:none;">View Reports</a>
+            </article>
+        </div>
+	</section>
+
+	<footer class="dash-footer">
+		<div class="dash-container">
+			<small>© Misfat RH</small>
+			<a href="login.HTML">← Back to Login</a>
+		</div>
+	</footer>
+
+    <!-- HR Console Modal -->
+    <div class="modal" id="hr-modal" hidden>
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-dialog" role="dialog" aria-labelledby="hr-title" aria-modal="true">
+            <div class="modal-header">
+                <h3 id="hr-title">HR Console</h3>
+                <button class="modal-close" type="button" data-close aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="hr-stats">
+                    <div class="donut" id="hr-donut" aria-label="Employee distribution donut chart"></div>
+                    <div class="legend">
+                        <div class="legend-item"><span class="swatch swatch-contract"></span> With Contract <strong id="val-contract">0</strong></div>
+                        <div class="legend-item"><span class="swatch swatch-intern"></span> Stagiaires <strong id="val-intern">0</strong></div>
+                        <div class="legend-item total">Total <strong id="val-total">0</strong></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-chip" data-close>Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attendance</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="dash-header">
+		<div class="dash-container">
+			<div class="dash-brand">Misfat RH</div>
+			<nav class="dash-nav">
+				<a href="dashboard.html">Dashboard</a>
+				<a href="employees.html">Employees</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="dash-container" style="padding:24px 24px 40px;">
+		<h1>Attendance</h1>
+		<p class="sub">Record presence/absence for a matricule. Data is saved locally for now.</p>
+
+		<div class="card" style="margin-top:12px;">
+			<div class="field">
+				<label class="label" for="att-mat">Matricule</label>
+				<div class="input"><span class="leading">#</span><input id="att-mat" type="text" placeholder="e.g., 1001"></div>
+			</div>
+			<div class="field">
+				<label class="label" for="att-date">Date</label>
+				<div class="input"><input id="att-date" type="date"></div>
+			</div>
+			<div class="field">
+				<label class="label" for="att-status">Status</label>
+				<div class="input">
+					<select id="att-status" style="width:100%; padding:12px; border:1px solid var(--border); border-radius:10px;">
+						<option value="Present">Present</option>
+						<option value="Absent">Absent</option>
+						<option value="Leave">Leave</option>
+					</select>
+				</div>
+			</div>
+			<button class="btn-primary" id="att-save" style="width:auto;">Save</button>
+		</div>
+
+		<div class="card" style="margin-top:16px;">
+			<h3>Recent Records</h3>
+			<div class="table-wrap">
+				<table class="table" id="att-table">
+					<thead><tr><th>Matricule</th><th>Date</th><th>Status</th><th></th></tr></thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+
+	<script src="app.js"></script>
+</body>
+</html>

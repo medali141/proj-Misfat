@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Leave Requests</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="dash-header">
+		<div class="dash-container">
+			<div class="dash-brand">Misfat RH</div>
+			<nav class="dash-nav">
+				<a href="dashboard.html">Dashboard</a>
+				<a href="employees.html">Employees</a>
+				<a href="attendance.html">Attendance</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="dash-container" style="padding:24px 24px 40px;">
+		<h1>Leave Requests</h1>
+		<p class="sub">Submit and manage employee leave requests. Stored locally for now.</p>
+
+		<div class="card" style="margin-top:12px;">
+			<div class="field"><label class="label" for="lv-mat">Matricule</label><div class="input"><span class="leading">#</span><input id="lv-mat" type="text" placeholder="e.g., 1001"></div></div>
+			<div class="field"><label class="label" for="lv-type">Type</label>
+				<div class="input">
+					<select id="lv-type" style="width:100%; padding:12px; border:1px solid var(--border); border-radius:10px;">
+						<option value="Paid">Paid</option>
+						<option value="Unpaid">Unpaid</option>
+						<option value="Sick">Sick</option>
+					</select>
+				</div>
+			</div>
+			<div class="field"><label class="label" for="lv-from">From</label><div class="input"><input id="lv-from" type="date"></div></div>
+			<div class="field"><label class="label" for="lv-to">To</label><div class="input"><input id="lv-to" type="date"></div></div>
+			<div class="field"><label class="label" for="lv-notes">Notes</label><div class="input"><input id="lv-notes" type="text" placeholder="Optional"></div></div>
+			<button class="btn-primary" id="lv-save" style="width:auto;">Submit</button>
+		</div>
+
+		<div class="card" style="margin-top:16px;">
+			<h3>Requests</h3>
+			<div class="table-wrap">
+				<table class="table" id="lv-table">
+					<thead><tr><th>Matricule</th><th>Type</th><th>From</th><th>To</th><th>Status</th><th></th></tr></thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+
+	<script src="app.js"></script>
+</body>
+</html>
